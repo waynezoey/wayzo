@@ -1,27 +1,27 @@
-zoey:
-  username: zoey
-  name: Zoey
+ghost:
+  username: ghost
+  name: Ghost
   url_full: http://jekyller.github.io/jasper2/
   url: jekyller.github.io/jasper2
   bio: The professional publishing platform
   picture: assets/images/ghost.png
-  facebook: zoey
+  facebook: ghost
   twitter: tryghost
   cover: False
-zoey:
-  username: zoey
-  name: Zoey
+hannah:
+  username: hannah
+  name: Hannah Wolfe
   location: London, UK
   url_full: http://hannah.wf/
-  url: zoey.wf
-  bio: zoey is the co-founder and lead developer at Ghost. She spends her days looking after Ghost's developer community, tracking down bugs & ensuring Ghost(Pro) is a happy place.
+  url: hannah.wf
+  bio: Hannah is the co-founder and lead developer at Ghost. She spends her days looking after Ghost's developer community, tracking down bugs & ensuring Ghost(Pro) is a happy place.
   picture: assets/images/hannah.jpg
   facebook: False
   twitter: erisds
   cover: assets/images/hannah-cover.jpg
-zoey:
-  username: zoey
-  name: Zoey
+john:
+  username: john
+  name: John O'Nolan
   location: On a plane
   url_full: http://john.onolan.org/
   url: john.onolan.org
