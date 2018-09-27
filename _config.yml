@@ -1,80 +1,95 @@
-# Site settings 配置站点
-title: '廖柯宇的独立博客'
-description: '昵称悟空，千禧一代，前端开发者/伪极客/灵魂摄影师，热爱技术&设计。很高兴能在这里与你分享我对技术和生活的思考。'
-keyword: '廖柯宇, 廖柯宇的独立博客, 廖柯宇的博客, 前端, 前端开发, 前端博客, javascript, vuejs, nodejs, 设计'
-url: 'http://liaokeyu.com' # your host
-
-# if you don't need baseurl, you should leave this value blank.
-baseurl: ''
-
-# Navigation links
-nav:
-  home: '/'
-  tags: '/tags.html'
-
-# Footer
-footer:
-  since: 2017
-
-# Author 配置博主信息
-author: '廖柯宇'
-nickname: '悟空'
-bio: '前端开发者，热爱技术&设计，简单乐观爱创造'
-avatar: '/assets/img/profile.png'
-
-# Search
-search: true
-
-# Night mode
-nightMode: true
-
-# Comments 评论功能
-comments:
-  disqus: false
-  disqus_url: 'https://liaokeyu.disqus.com/embed.js'
-
-# MathJax 公式支持 by Ray-Eldath
-mathjax: true
-
-# Share
-social-share: true
-social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
-
-# theme color 主题皮肤
-theme-color: 'default'  # pink or default
-
-# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
-postPatterns: 'circuitBoard'
-
-# SNS settings 配置社交网站
-# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
-sns:
-  weibo: '//weibo.com/lovecolcol'
-  juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
-  instagram: '//www.instagram.com/steveliaocn'
-  github: '//github.com/kaeyleo'
-
-# Tags 设置标签
-recommend-tags: true # whether or not display recommend-tags on the sidebar
-recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
-
-# Build settings
-paginate: 6
-paginate_path: 'page:num'
-exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
-
-# Markdown
+# Jekyll configuration
 markdown: kramdown
 highlighter: rouge
-kramdown:
-  input: GFM
+paginate: 100 # it will paginate after this number
+language: 'en-uk'
 
-# RSS
-RSS: false
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /jasper2/
 
-# Permalink
-# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
-permalink: /:year/:month/:day/:title.html
+# Website info
+title: Ghost
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+production_url: https://jekyller.github.io/jasper2/
+source_url: https://github.com/jekyller/jasper2/
+CNAME: #add cname for website to be created
 
-# Plugins
-plugins: [jekyll-paginate]
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if 'True' the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter: tryghost # replace by your username
+facebook: ghost # replace by your username
+
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: False
+lsi: False
+username: jekyller
+repo: jasper2
+branch: master
+relative_source: ../jasper2/
+destination: ../jasper2-pages/
+production_url:  https://jekyller.github.io/jasper2/
+source_url:  https://github.com/jekyller/jasper2/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*
